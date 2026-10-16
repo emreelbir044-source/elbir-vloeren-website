@@ -1,0 +1,10 @@
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: elbir-vloeren:local
+    container_name: elbir-website
+    ports:
+      - "8086:80"
+    restart: unless-stopped
