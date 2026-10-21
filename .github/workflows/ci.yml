@@ -34,4 +34,6 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name == 'push' }}
-          tags: ghcr.io/emreelbir044-source/elbir-vloeren-website:latest
+          tags: |
+            ghcr.io/emreelbir044-source/elbir-vloeren-website:latest
+            ghcr.io/emreelbir044-source/elbir-vloeren-website:sha-${{ github.sha }}
